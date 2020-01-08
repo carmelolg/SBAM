@@ -1,12 +1,11 @@
-package it.altran.springtest;
+package it.carmelolagamba.springboot;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import it.carmelolagamba.springboot.controller.SystemController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import it.altran.springtest.controller.SystemController;
 
 @SpringBootTest
 public class SystemControllerTest {

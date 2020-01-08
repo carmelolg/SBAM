@@ -1,9 +1,9 @@
-package it.altran.springtest.controller;
+package it.carmelolagamba.springboot.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import it.altran.springtest.config.ApplicationProperties;
-import it.altran.springtest.dto.system.InfoDto;
+import it.carmelolagamba.springboot.config.ApplicationProperties;
+import it.carmelolagamba.springboot.dto.system.InfoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

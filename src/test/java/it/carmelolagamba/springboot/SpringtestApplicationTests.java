@@ -1,4 +1,4 @@
-package it.altran.springtest;
+package it.carmelolagamba.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

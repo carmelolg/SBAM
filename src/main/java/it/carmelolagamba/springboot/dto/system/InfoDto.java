@@ -1,10 +1,7 @@
-package it.altran.springtest.config;
+package it.carmelolagamba.springboot.dto.system;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+public class InfoDto {
 
-@ConfigurationProperties
-public class ApplicationProperties {
-  
 	private String environment;
     private String name;
     private String url;
@@ -34,5 +31,5 @@ public class ApplicationProperties {
 	public void setPort(Integer port) {
 		this.port = port;
 	}
-
+    	
 }
