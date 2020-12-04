@@ -1,0 +1,6 @@
+spring:
+    profiles: prod
+environment: prod
+name: Production
+url: localhost
+port: 8080

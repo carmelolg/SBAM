@@ -1,0 +1,6 @@
+spring:
+    profiles: dev
+environment: test
+name: Test
+url: localhost
+port: 8080

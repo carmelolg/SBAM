@@ -3,12 +3,14 @@ package it.carmelolagamba.springboot;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 import it.carmelolagamba.springboot.config.ApplicationProperties;
 
 @org.springframework.boot.autoconfigure.SpringBootApplication
 @EnableConfigurationProperties
+@ConfigurationPropertiesScan
 public class SpringBootApplication implements CommandLineRunner {
 
 	@Autowired
