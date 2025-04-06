@@ -10,8 +10,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>it.carmelolagamba</groupId>
-    <artifactId>spring-boot-starter-kit</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <artifactId>spring-boot-microservice-template</artifactId>
+    <version>2.0.0</version>
     <name>Spring Boot Starter Kit</name>
     <description></description>
 
