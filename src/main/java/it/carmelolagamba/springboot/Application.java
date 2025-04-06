@@ -25,12 +25,12 @@ public class Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		System.out.println(" ---------------------------------------------------- ");
-		System.out.println(" -- ");
-		System.out.println(" --   Environment: " + config.getEnvironment());
-		System.out.println(" --   App name: " + config.getName());
-		System.out.println(" --   Rest API available at: " + config.getUrl() + ":" + String.valueOf(config.getPort()));
-		System.out.println(" -- ");
-		System.out.println(" ---------------------------------------------------- ");
+		log.info(" ---------------------------------------------------- ");
+		log.info(" -- ");
+		log.info(" --   Environment: {}", config.getEnvironment());
+		log.info(" --   App name: {}", config.getName());
+		log.info(" --   Rest API available at: {}:{}", config.getUrl(), config.getPort());
+		log.info(" -- ");
+		log.info(" ---------------------------------------------------- ");
 	}
 }
