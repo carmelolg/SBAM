@@ -4,8 +4,8 @@ A starter template for Spring Boot applications, designed to quickly kickstart t
 
 ## Key Technologies
 
-- **Spring Boot**: v2.3.6
-- **Swagger**: v3 (for API documentation)
+- **Spring Boot**: v3.4.4
+- **OpenAPI**: v3.0.1 (for API documentation)
 - **Maven**: for dependency management and build
 - **Docker**: for containerization
 
@@ -17,8 +17,8 @@ A starter template for Spring Boot applications, designed to quickly kickstart t
 
 Make sure you have the following tools installed:
 
-- **JDK**: Version 11 or higher
-- **Maven**: Version 3.6 or higher
+- **JDK**: Version 17 or higher
+- **Maven**: Version 3.6.3 or higher
 - **Docker** (optional): for running in containers
 - **Git**: for cloning the repository
 
