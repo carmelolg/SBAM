@@ -1,28 +1,29 @@
 package it.carmelolagamba.springboot.controller;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import it.carmelolagamba.springboot.config.ApplicationProperties;
 import it.carmelolagamba.springboot.dto.system.InfoDto;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Api(value = "System Information")
+@Tag(name = "System Information", description = "System Information")
 public class SystemController {
 
 	@Autowired
 	private ApplicationProperties config;
 
-	@ApiOperation(value = "Alive test")
+	@Operation(summary = "Alive test")
 	@RequestMapping(method = RequestMethod.GET, path = "/ping")
 	public String ping() {
 		return "pong";
 	}
 
-	@ApiOperation(value = "Get system info")
+	@Operation(summary = "Get system info")
 	@RequestMapping(method = RequestMethod.GET, path = "/info")
 	public InfoDto info() {
 
