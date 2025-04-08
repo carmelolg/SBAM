@@ -1,6 +1,14 @@
+# Custom properties
 environment: prod
 name: Production
 
+# Spring configurations
+spring:
+  devtools:
+    restart:
+      enabled: false
+
+# Logging properties
 logging:
   level:
     it.carmelolagamba: INFO

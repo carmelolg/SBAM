@@ -14,14 +14,13 @@ management:
       readinessState:
         enabled: true
 
-# Logging properties
-logging:
-  level:
-    root: INFO
-    web: INFO
-
 # OpenAI properties
 springdoc:
   packagesToScan: it.carmelolagamba
   pathsToMatch: /, /*/**
 
+# Logging properties
+logging:
+  level:
+    root: INFO
+    web: INFO

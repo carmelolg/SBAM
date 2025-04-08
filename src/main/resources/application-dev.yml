@@ -1,6 +1,8 @@
+# Custom properties
 environment: test
 name: Test
 
+# Logging properties
 logging:
   level:
     it.carmelolagamba: DEBUG
