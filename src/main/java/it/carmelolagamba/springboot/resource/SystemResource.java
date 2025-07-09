@@ -1,5 +1,7 @@
 package it.carmelolagamba.springboot.resource;
 
+import lombok.Getter;
+
 /**
  * Resource Object for system information.
  * Contains details about the environment, application description, URL, and port.

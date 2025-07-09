@@ -1,0 +1,6 @@
+# Custom properties
+environment: test
+description: Unit test environment
+
+server:
+  port: 8080
