@@ -1,6 +1,6 @@
 # Custom properties
 environment: sit
-name: System Integration Test
+description: System Integration Test
 
 # Logging properties
 logging:

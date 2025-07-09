@@ -11,7 +11,7 @@ import lombok.Setter;
 public class ApplicationProperties {
   
 	private String environment;
-	private String name;
+	private String description;
     private String url;
 
 	@Value("${server.port}")

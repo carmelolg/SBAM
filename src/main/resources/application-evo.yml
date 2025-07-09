@@ -1,6 +1,6 @@
 # Custom properties
 environment: evo
-name: Evolution environment
+description: Evolution environment
 
 # Logging properties
 logging:

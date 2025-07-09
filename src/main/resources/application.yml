@@ -1,5 +1,4 @@
 # Custom properties
-url: localhost # Test variable, not used in the code, just for demonstration
 server:
   port: 8080
 

@@ -1,6 +1,6 @@
 # Custom properties
 environment: prod
-name: Production
+description: Production
 
 # Spring configurations
 spring:

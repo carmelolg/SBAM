@@ -1,5 +1,6 @@
 package it.carmelolagamba.springboot;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -14,10 +15,10 @@ import lombok.extern.slf4j.Slf4j;
 @EnableConfigurationProperties
 @ConfigurationPropertiesScan
 @Slf4j
+@AllArgsConstructor
 public class Application implements CommandLineRunner {
 
-	@Autowired
-	private ApplicationProperties config;
+	private final ApplicationProperties config;
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
@@ -28,8 +29,8 @@ public class Application implements CommandLineRunner {
 		log.info(" ---------------------------------------------------- ");
 		log.info(" -- ");
 		log.info(" --   Environment: {}", config.getEnvironment());
-		log.info(" --   App name: {}", config.getName());
-		log.info(" --   Rest API available at: {}:{}", config.getUrl(), config.getPort());
+		log.info(" --   App description: {}", config.getDescription());
+		log.info(" --   Rest API available at: [base-url]:{}/swagger-ui/index.html", config.getPort());
 		log.info(" -- ");
 		log.info(" ---------------------------------------------------- ");
 	}
