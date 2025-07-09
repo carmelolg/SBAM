@@ -12,3 +12,4 @@ spring:
 logging:
   level:
     it.carmelolagamba: INFO
+    org.springframework: WARN

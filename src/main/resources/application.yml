@@ -1,5 +1,5 @@
 # Custom properties
-url: localhost
+url: localhost # Test variable, not used in the code, just for demonstration
 server:
   port: 8080
 
@@ -18,9 +18,3 @@ management:
 springdoc:
   packagesToScan: it.carmelolagamba
   pathsToMatch: /, /*/**
-
-# Logging properties
-logging:
-  level:
-    root: INFO
-    web: INFO

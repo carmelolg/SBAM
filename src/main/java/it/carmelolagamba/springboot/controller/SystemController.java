@@ -3,7 +3,7 @@ package it.carmelolagamba.springboot.controller;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import it.carmelolagamba.springboot.config.ApplicationProperties;
-import it.carmelolagamba.springboot.dto.system.InfoDto;
+import it.carmelolagamba.springboot.dto.InfoDto;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

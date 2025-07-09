@@ -1,4 +1,4 @@
-package it.carmelolagamba.springboot.dto.system;
+package it.carmelolagamba.springboot.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

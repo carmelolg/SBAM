@@ -1,0 +1,9 @@
+# Custom properties
+environment: evo
+name: Evolution environment
+
+# Logging properties
+logging:
+  level:
+    it.carmelolagamba: INFO
+    org.springframework: WARN
