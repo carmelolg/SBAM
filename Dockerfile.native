@@ -1,0 +1,12 @@
+# Stage 1: Build the JAR file
+# TODO find a standard docker image to build native images with graalvm with maven
+FROM softinstigate/graalvm-maven:21.0.2-graalce AS build
+WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+RUN mvn -Pnative native:compile
+
+# Stage 2: Run the application
+FROM ubuntu:jammy
+COPY --from=build /app/target/spring-boot-microservice-template spring-boot-microservice-template
+CMD ["/spring-boot-microservice-template"]

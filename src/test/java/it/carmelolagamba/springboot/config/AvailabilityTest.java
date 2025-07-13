@@ -3,6 +3,7 @@ package it.carmelolagamba.springboot.config;
 import static org.springframework.boot.availability.LivenessState.CORRECT;
 import static org.springframework.boot.availability.ReadinessState.ACCEPTING_TRAFFIC;
 
+import lombok.AllArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.availability.ApplicationAvailability;
