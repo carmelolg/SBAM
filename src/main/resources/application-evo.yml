@@ -6,5 +6,6 @@ environment:
 # Logging properties
 logging:
   level:
+    web: INFO
     it.carmelolagamba: INFO
     org.springframework: WARN
