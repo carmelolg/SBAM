@@ -1,4 +1,8 @@
 # Custom properties
+version: 2.1.0
+name: Spring Boot Microservice Template
+description: A template for Spring Boot microservices with OpenAPI and Docker files
+
 server:
   port: 8080
 

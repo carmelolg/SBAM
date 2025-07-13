@@ -1,6 +1,7 @@
 # Custom properties
-environment: evo
-description: Evolution environment
+environment:
+  name: evo
+  description: Evolution environment
 
 # Logging properties
 logging:

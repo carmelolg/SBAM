@@ -1,6 +1,7 @@
 package it.carmelolagamba.springboot.service;
 
 import it.carmelolagamba.springboot.config.ApplicationProperties;
+import it.carmelolagamba.springboot.config.EnvironmentProperties;
 import it.carmelolagamba.springboot.dto.SystemDTO;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -9,9 +10,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class SystemService {
 
-    private final ApplicationProperties config;
+    private final EnvironmentProperties environmentProperties;
+    private final ApplicationProperties applicationProperties;
 
      public SystemDTO getSystemInfo() {
-         return new SystemDTO(config.getEnvironment(), config.getDescription(), config.getPort());
+         return new SystemDTO(environmentProperties.getName(), environmentProperties.getDescription(), applicationProperties.getPort());
      }
 }

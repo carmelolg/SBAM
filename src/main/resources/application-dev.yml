@@ -1,6 +1,7 @@
 # Custom properties
-environment: dev
-description: Development environment
+environment:
+  name: dev
+  description: Development environment
 
 # Logging properties
 logging:

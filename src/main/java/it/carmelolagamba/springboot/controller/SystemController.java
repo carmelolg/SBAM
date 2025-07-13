@@ -21,8 +21,8 @@ public class SystemController {
     private final SystemInfoCommand systemInfoCommand;
     private final SystemResourceAssembler systemResourceAssembler;
 
-    @Operation(summary = "Get system info")
-    @RequestMapping(method = RequestMethod.GET, path = "/info")
+    @Operation(summary = "Get environment info")
+    @RequestMapping(method = RequestMethod.GET, path = "/env/info")
     public ResponseEntity<SystemResource> info() {
         return ok(systemResourceAssembler.fromDto(systemInfoCommand.execute()));
     }

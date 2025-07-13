@@ -17,4 +17,15 @@ public class SystemResourceAssembler implements IAssembler<SystemResource, Syste
     public SystemResource fromDto(SystemDTO dto) {
         return new SystemResource(dto.environment(), dto.description(), dto.port());
     }
+
+    /**
+     * Converts a resource object to a Data Transfer Object (DTO).
+     *
+     * @param systemResource the resource to convert
+     * @return the converted DTO
+     */
+    @Override
+    public SystemDTO toDto(SystemResource systemResource) {
+        return new SystemDTO(systemResource.environment(), systemResource.description(), systemResource.port());
+    }
 }
