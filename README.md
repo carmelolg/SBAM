@@ -4,7 +4,7 @@ A starter template for Spring Boot applications, designed to quickly kickstart t
 
 ## Key Technologies
 
-- **Spring Boot**: v3.4.4
+- **Spring Boot**: v3.5.3
 - **OpenAPI**: v3.0.1 (for API documentation)
 - **Maven**: for dependency management and build
 - **Docker**: for containerization
@@ -17,8 +17,8 @@ A starter template for Spring Boot applications, designed to quickly kickstart t
 
 Make sure you have the following tools installed:
 
-- **JDK**: Version 17 or higher
-- **Maven**: Version 3.6.3 or higher
+- **JDK**: Version 21 or higher
+- **Maven**: Version 3.9.7 or higher
 - **Docker** (optional): for running in containers
 - **Git**: for cloning the repository
 
@@ -74,17 +74,29 @@ http://localhost:8080/swagger-ui/index.html
 
 ## Using Docker
 
-You can containerize the project using the included Dockerfile. Run the following commands to build and start the Docker image:
-Build the Docker Image
+You can containerize the project using the included Dockerfiles. 
+This repository provides two Dockerfiles:
+
+- Dockerfile (for standard JVM image)
+- Dockerfile.native (for GraalVM Native image)
+
+>Note: Building a GraalVM native image requires the GraalVM Native Image tool and may take additional time/resources.
+
+1. **Build the Docker Image** (JVM):
 
 ```bash
-docker build -t spring-boot-microservice-template .
-```
-
-## Run the Container
-
-```bash
+# Build the Docker image (JVM)
+docker build -t spring-boot-microservice-template -f Dockerfile .
+# Run the container
 docker run -p 8080:8080 spring-boot-microservice-template
+```
+2. **Build the Docker Image** (GraalVM Native):
+
+```bash 
+# Build the Docker image (Native)
+docker build -t spring-boot-microservice-template-native -f Dockerfile.native .
+# Run the container
+docker run -p 8080:8080 spring-boot-microservice-template-native
 ```
 
 The application will now be accessible at http://localhost:8080.
@@ -101,7 +113,8 @@ spring-boot-microservice-template/
 │   │   └── resources/  # Configuration files
 │   └── test/           # Project tests
 ├── .gitignore          # Git ignored files
-├── Dockerfile          # Containerization file
+├── Dockerfile          # Containerization file (JVM)
+├── Dockerfile.native   # Containerization file (GraalVM Native)
 ├── pom.xml             # Maven configuration file
 └── README.md           # Project documentation
 ```
