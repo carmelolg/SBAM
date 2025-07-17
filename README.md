@@ -7,6 +7,7 @@ A starter template for Spring Boot applications, designed to quickly kickstart t
 [![Coverage](.github/badges/jacoco.svg)](.github/badges/jacoco.svg)
 [![Branches](.github/badges/branches.svg)](.github/badges/branches.svg)
 
+
 ## Key Technologies
 
 - **Spring Boot**: v3.5.3
