@@ -5,8 +5,8 @@
     <envs>
       <env name="spring.profiles.active" value="dev" />
     </envs>
-    <option name="MAIN_CLASS_NAME" value="it.carmelolagamba.springboot.Application" />
-    <module name="spring-boot-microservice-template" />
+    <option name="MAIN_CLASS_NAME" value="it.carmelolagamba.sbam.Application" />
+    <module name="sbam" />
     <extension name="net.ashald.envfile">
       <option name="IS_ENABLED" value="false" />
       <option name="IS_SUBST" value="false" />

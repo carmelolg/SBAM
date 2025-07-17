@@ -8,5 +8,5 @@ RUN mvn -Pnative native:compile
 
 # Stage 2: Run the application
 FROM ubuntu:jammy
-COPY --from=build /app/target/spring-boot-microservice-template spring-boot-microservice-template
-CMD ["/spring-boot-microservice-template"]
+COPY --from=build /app/target/sbam sbam
+CMD ["/sbam"]
