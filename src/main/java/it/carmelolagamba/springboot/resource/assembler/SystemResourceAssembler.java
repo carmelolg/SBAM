@@ -2,9 +2,11 @@ package it.carmelolagamba.springboot.resource.assembler;
 
 import it.carmelolagamba.springboot.dto.SystemDTO;
 import it.carmelolagamba.springboot.resource.SystemResource;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 @Component
+@Slf4j
 public class SystemResourceAssembler implements IAssembler<SystemResource, SystemDTO> {
 
     /**
@@ -15,6 +17,7 @@ public class SystemResourceAssembler implements IAssembler<SystemResource, Syste
      */
     @Override
     public SystemResource fromDto(SystemDTO dto) {
+        log.debug("Converting SystemDTO to SystemResource: {}", dto);
         return new SystemResource(dto.environment(), dto.description(), dto.port());
     }
 
@@ -26,6 +29,7 @@ public class SystemResourceAssembler implements IAssembler<SystemResource, Syste
      */
     @Override
     public SystemDTO toDto(SystemResource systemResource) {
+        log.debug("Converting SystemResource to SystemDTO: {}", systemResource);
         return new SystemDTO(systemResource.environment(), systemResource.description(), systemResource.port());
     }
 }

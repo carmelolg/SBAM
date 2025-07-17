@@ -6,6 +6,7 @@ import it.carmelolagamba.springboot.command.SystemInfoCommand;
 import it.carmelolagamba.springboot.resource.SystemResource;
 import it.carmelolagamba.springboot.resource.assembler.SystemResourceAssembler;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +17,7 @@ import static org.springframework.http.ResponseEntity.ok;
 @AllArgsConstructor
 @RestController
 @Tag(name = "System Information", description = "System Information")
+@Slf4j
 public class SystemController {
 
     private final SystemInfoCommand systemInfoCommand;
@@ -24,6 +26,7 @@ public class SystemController {
     @Operation(summary = "Get environment info")
     @RequestMapping(method = RequestMethod.GET, path = "/env/info")
     public ResponseEntity<SystemResource> info() {
+        log.debug("Retrieving system information");
         return ok(systemResourceAssembler.fromDto(systemInfoCommand.execute()));
     }
 
