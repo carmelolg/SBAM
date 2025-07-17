@@ -30,8 +30,8 @@ jobs:
       - name: Commit and push badge
         if: github.ref == 'refs/heads/master'
         run: |
-          git config --global user.name 'carmelolg'
-          git config --global user.email 'carmelolagamba@hotmail.it'
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
           git add .github/badges/*.svg
           git commit -m "Aggiorna badge coverage" || echo "No changes to commit"
           git push
