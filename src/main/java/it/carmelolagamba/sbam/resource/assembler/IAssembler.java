@@ -17,11 +17,4 @@ public interface IAssembler<RESOURCE, DTO> {
      */
     RESOURCE fromDto(DTO dto);
 
-    /**
-     * Converts a resource object to a Data Transfer Object (DTO).
-     *
-     * @param resource the resource to convert
-     * @return the converted DTO
-     */
-    DTO toDto(RESOURCE resource);
 }

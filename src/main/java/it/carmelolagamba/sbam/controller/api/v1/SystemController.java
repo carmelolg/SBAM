@@ -1,4 +1,4 @@
-package it.carmelolagamba.sbam.controller;
+package it.carmelolagamba.sbam.controller.api.v1;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

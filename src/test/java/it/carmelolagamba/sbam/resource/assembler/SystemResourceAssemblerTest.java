@@ -35,27 +35,4 @@ class SystemResourceAssemblerTest {
             assertThrows(NullPointerException.class, () -> assembler.fromDto(null));
         }
     }
-
-    @Nested
-    @DisplayName("toDto method")
-    class ToDto {
-
-        @Test
-        @DisplayName("Converts valid SystemResource to SystemDTO")
-        void convertsValidSystemResourceToSystemDTO() {
-            SystemResource resource = new SystemResource("dev", "Development environment", 9090);
-
-            SystemDTO dto = assembler.toDto(resource);
-
-            assertEquals("dev", dto.environment());
-            assertEquals("Development environment", dto.description());
-            assertEquals(9090, dto.port());
-        }
-
-        @Test
-        @DisplayName("Throws exception when SystemResource is null")
-        void throwsExceptionWhenSystemResourceIsNull() {
-            assertThrows(NullPointerException.class, () -> assembler.toDto(null));
-        }
-    }
 }

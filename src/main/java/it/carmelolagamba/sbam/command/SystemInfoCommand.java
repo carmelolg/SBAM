@@ -2,6 +2,7 @@ package it.carmelolagamba.sbam.command;
 
 import it.carmelolagamba.sbam.dto.SystemDTO;
 import it.carmelolagamba.sbam.service.SystemService;
+import it.carmelolagamba.sbam.service.facade.CoreServiceFacade;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -11,11 +12,11 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class SystemInfoCommand implements ICommand<SystemDTO> {
 
-    private final SystemService systemService;
+    private final CoreServiceFacade coreServiceFacade;
 
     @Override
     public SystemDTO execute() {
         log.debug("Executing command to retrieve system information");
-        return systemService.getSystemInfo();
+        return coreServiceFacade.getSystemInfo();
     }
 }

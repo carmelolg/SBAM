@@ -7,4 +7,4 @@
  * @Since 2.1
  * @Author carmelolg
  */
-package it.carmelolagamba.sbam.entity.mapper;
+package it.carmelolagamba.sbam.dto.mapper;

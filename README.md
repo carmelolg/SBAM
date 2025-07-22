@@ -111,16 +111,40 @@ The application will now be accessible at http://localhost:8080.
 
 The main structure of the project is as follows:
 ```crmsh
-spring-boot-microservice-template/
-├── .mvn/               # Maven Wrapper files
-├── src/                # Main source code
+ssbam/
+├── docs/
+│   └── architecture.drawio
+├── src/
 │   ├── main/
-│   │   ├── java/       # Application's Java code
-│   │   └── resources/  # Configuration files
-│   └── test/           # Project tests
-├── .gitignore          # Git ignored files
-├── Dockerfile          # Containerization file (JVM)
-├── Dockerfile.native   # Containerization file (GraalVM Native)
-├── pom.xml             # Maven configuration file
-└── README.md           # Project documentation
+│   │   ├── java/
+│   │   │   └── it/
+│   │   │       └── carmelolagamba/
+│   │   │           └── sbam/
+│   │   │               ├── command/
+│   │   │               ├── config/
+│   │   │               ├── controller/
+│   │   │               │   ├── api/
+│   │   │               │   │   ├── v1/
+│   │   │               │   │   └── v2/
+│   │   │               ├── dto/
+│   │   │               │   └── mapper/
+│   │   │               ├── entity/
+│   │   │               ├── repository/
+│   │   │               ├── resource/
+│   │   │               │   └── assembler/
+│   │   │               ├── security/
+│   │   │               ├── service/
+│   │   │               │   └── facade/
+│   │   └── resources/
+│   │       ├── application-dev.yml
+│   │       ├── application-evo.yml
+│   │       ├── application-prod.yml
+│   │       ├── application-sit.yml
+│   │       ├── application.yml
+│   │       └── banner.txt
+├── Dockerfile
+├── Dockerfile.native
+├── LICENSE.md
+├── pom.xml
+└── README.md
 ```

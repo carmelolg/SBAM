@@ -1,5 +1,6 @@
 package it.carmelolagamba.sbam.controller;
 
+import it.carmelolagamba.sbam.controller.api.v1.SystemController;
 import it.carmelolagamba.sbam.resource.SystemResource;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

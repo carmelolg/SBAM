@@ -2,11 +2,11 @@ package it.carmelolagamba.sbam.command;
 
 import it.carmelolagamba.sbam.dto.SystemDTO;
 import it.carmelolagamba.sbam.service.SystemService;
+import it.carmelolagamba.sbam.service.facade.CoreServiceFacade;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
@@ -14,13 +14,13 @@ import static org.mockito.Mockito.*;
 
 class SystemInfoCommandTest {
 
-    private SystemService systemService;
+    private CoreServiceFacade coreServiceFacade;
     private SystemInfoCommand systemInfoCommand;
 
     @BeforeEach
     void setUp() {
-        systemService = mock(SystemService.class);
-        systemInfoCommand = new SystemInfoCommand(systemService);
+        coreServiceFacade = mock(CoreServiceFacade.class);
+        systemInfoCommand = new SystemInfoCommand(coreServiceFacade);
     }
 
     @Nested
@@ -31,23 +31,23 @@ class SystemInfoCommandTest {
         @DisplayName("Returns system information successfully")
         void returnsSystemInformationSuccessfully() {
             SystemDTO expectedSystemInfo = new SystemDTO("Test Environment", "Test Description", 8080);
-            when(systemService.getSystemInfo()).thenReturn(expectedSystemInfo);
+            when(coreServiceFacade.getSystemInfo()).thenReturn(expectedSystemInfo);
 
             SystemDTO result = systemInfoCommand.execute();
 
             assertEquals(expectedSystemInfo, result);
-            verify(systemService, times(1)).getSystemInfo();
+            verify(coreServiceFacade, times(1)).getSystemInfo();
         }
 
         @Test
         @DisplayName("Throws exception when systemService returns null")
         void throwsExceptionWhenSystemServiceReturnsNull() {
-            when(systemService.getSystemInfo()).thenReturn(null);
+            when(coreServiceFacade.getSystemInfo()).thenReturn(null);
 
             SystemDTO result = systemInfoCommand.execute();
 
             assertNull(result);
-            verify(systemService, times(1)).getSystemInfo();
+            verify(coreServiceFacade, times(1)).getSystemInfo();
         }
     }
 }
