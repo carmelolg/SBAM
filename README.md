@@ -1,6 +1,6 @@
 # SBAM - Spring Boot Architecture for Microservices
 
-![asd](https://i.ibb.co/XkWH49Pp/banner.png "SBAM Logo")
+![logo](https://i.ibb.co/VWHWRJxv/logo-design.png "SBAM Logo")
 
 A starter template for Spring Boot applications, designed to quickly kickstart the development of microservices with a ready-to-use configuration.
 
