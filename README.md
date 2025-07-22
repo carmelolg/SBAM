@@ -92,35 +92,74 @@ This repository provides two Dockerfiles:
 
 ```bash
 # Build the Docker image (JVM)
-docker build -t spring-boot-microservice-template -f Dockerfile .
+docker build -t sbam -f Dockerfile .
 # Run the container
-docker run -p 8080:8080 spring-boot-microservice-template
+docker run -p 8080:8080 sbam
 ```
 2. **Build the Docker Image** (GraalVM Native):
 
 ```bash 
 # Build the Docker image (Native)
-docker build -t spring-boot-microservice-template-native -f Dockerfile.native .
+docker build -t sbam-native -f Dockerfile.native .
 # Run the container
-docker run -p 8080:8080 spring-boot-microservice-template-native
+docker run -p 8080:8080 sbam-native
 ```
 
 The application will now be accessible at http://localhost:8080.
 
 ## Project Structure
 
+This project follows the CLEAN architecture principles, ensuring a clear separation of concerns and maintainability. The code is organized into layers, with each layer having its own responsibilities.
+
 The main structure of the project is as follows:
+
 ```crmsh
-spring-boot-microservice-template/
-├── .mvn/               # Maven Wrapper files
-├── src/                # Main source code
+sbam/
+├── docs/
+│   └── architecture.drawio
+├── src/
 │   ├── main/
-│   │   ├── java/       # Application's Java code
-│   │   └── resources/  # Configuration files
-│   └── test/           # Project tests
-├── .gitignore          # Git ignored files
-├── Dockerfile          # Containerization file (JVM)
-├── Dockerfile.native   # Containerization file (GraalVM Native)
-├── pom.xml             # Maven configuration file
-└── README.md           # Project documentation
+│   │   ├── java/
+│   │   │   └── it/
+│   │   │       └── carmelolagamba/
+│   │   │           └── sbam/
+│   │   │               ├── adapters/
+│   │   │               │   ├── command/
+│   │   │               │   ├── dto/
+│   │   │               │   │   └── mapper/
+│   │   │               │   ├── outbound/
+│   │   │               │   │   ├── api/
+│   │   │               │   │   │   └── v1/
+│   │   │               │   │   └── consumer/
+│   │   │               │   └── resource/
+│   │   │               │       └── assembler/
+│   │   │               ├── common/
+│   │   │               │   ├── config/
+│   │   │               │   ├── security/
+│   │   │               │   └── utils/
+│   │   │               ├── core/
+│   │   │               │   ├── domain/
+│   │   │               │   │   ├── mapper/
+│   │   │               │   │   └── model/
+│   │   │               │   ├── facade/
+│   │   │               │   └── service/
+│   │   │               ├── integration/
+│   │   │               │   ├── http/
+│   │   │               │   │   └── entity/
+│   │   │               │   └── io/
+│   │   │               └── persistence/
+│   │   │                   ├── dao/
+│   │   │                   └── entity/
+│   │   └── resources/
+│   │       ├── application-dev.yml
+│   │       ├── application-evo.yml
+│   │       ├── application-prod.yml
+│   │       ├── application-sit.yml
+│   │       ├── application.yml
+│   │       └── banner.txt
+├── Dockerfile
+├── Dockerfile.native
+├── LICENSE.md
+├── pom.xml
+└── README.md
 ```

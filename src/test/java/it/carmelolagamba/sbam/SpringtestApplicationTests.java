@@ -1,14 +1,13 @@
 package it.carmelolagamba.sbam;
 
-import it.carmelolagamba.sbam.config.ApplicationProperties;
-import it.carmelolagamba.sbam.config.EnvironmentProperties;
+import it.carmelolagamba.sbam.common.config.ApplicationProperties;
+import it.carmelolagamba.sbam.common.config.EnvironmentProperties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;

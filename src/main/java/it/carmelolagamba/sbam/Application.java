@@ -1,7 +1,7 @@
 package it.carmelolagamba.sbam;
 
-import it.carmelolagamba.sbam.config.ApplicationProperties;
-import it.carmelolagamba.sbam.config.EnvironmentProperties;
+import it.carmelolagamba.sbam.common.config.ApplicationProperties;
+import it.carmelolagamba.sbam.common.config.EnvironmentProperties;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
