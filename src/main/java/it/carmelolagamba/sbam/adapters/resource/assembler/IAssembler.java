@@ -15,6 +15,6 @@ public interface IAssembler<RESOURCE, OUTPUT_MODEL> {
      * @param outputModel the output model to convert
      * @return the converted resource object
      */
-    RESOURCE fromDto(OUTPUT_MODEL outputModel);
+    RESOURCE fromModel(OUTPUT_MODEL outputModel);
 
 }
