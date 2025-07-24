@@ -16,7 +16,7 @@ public class SystemResourceAssembler implements IAssembler<SystemResource, Syste
      * @return the converted resource object
      */
     @Override
-    public SystemResource fromDto(SystemOutputModel dto) {
+    public SystemResource fromModel(SystemOutputModel dto) {
         log.debug("Converting SystemOutputModel to SystemResource: {}", dto);
         return new SystemResource(dto.environment(), dto.description(), dto.port());
     }

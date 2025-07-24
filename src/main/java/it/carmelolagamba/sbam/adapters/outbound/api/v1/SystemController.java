@@ -27,7 +27,7 @@ public class SystemController implements IRestController {
     @RequestMapping(method = RequestMethod.GET, path = "/env/info")
     public ResponseEntity<SystemResource> info() {
         log.debug("Retrieving system information");
-        return ok(systemResourceAssembler.fromDto(systemInfoCommand.execute()));
+        return ok(systemResourceAssembler.fromModel(systemInfoCommand.execute()));
     }
 
 }

@@ -1,6 +1,5 @@
 package it.carmelolagamba.sbam.adapters.resource.assembler;
 
-import it.carmelolagamba.sbam.adapters.resource.assembler.SystemResourceAssembler;
 import it.carmelolagamba.sbam.core.domain.model.SystemOutputModel;
 import it.carmelolagamba.sbam.adapters.resource.SystemResource;
 import org.junit.jupiter.api.DisplayName;
@@ -23,7 +22,7 @@ class SystemResourceAssemblerTest {
         void convertsValidSystemDTOToSystemResource() {
             SystemOutputModel dto = new SystemOutputModel("prod", "Production environment", 8080);
 
-            SystemResource resource = assembler.fromDto(dto);
+            SystemResource resource = assembler.fromModel(dto);
 
             assertEquals("prod", resource.environment());
             assertEquals("Production environment", resource.description());
@@ -33,7 +32,7 @@ class SystemResourceAssemblerTest {
         @Test
         @DisplayName("Throws exception when SystemDTO is null")
         void throwsExceptionWhenSystemDTOIsNull() {
-            assertThrows(NullPointerException.class, () -> assembler.fromDto(null));
+            assertThrows(NullPointerException.class, () -> assembler.fromModel(null));
         }
     }
 
