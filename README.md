@@ -5,8 +5,8 @@
 A starter template for Spring Boot applications, designed to quickly kickstart the development of microservices with a ready-to-use configuration.
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-[![Coverage](.github/old-badges/jacoco.svg)](.github/old-badges/jacoco.svg)
-[![Branches](.github/old-badges/branches.svg)](.github/old-badges/branches.svg)
+[![Coverage](.github/badges/jacoco.svg)](.github/badges/jacoco.svg)
+[![Branches](.github/badges/branches.svg)](.github/badges/branches.svg)
 
 ## Release Notes - Version 2.2.0
 Here are the key updates and changes in this release:
