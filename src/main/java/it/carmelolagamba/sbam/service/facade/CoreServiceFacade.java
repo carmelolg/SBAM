@@ -3,7 +3,8 @@ package it.carmelolagamba.sbam.service.facade;
 import it.carmelolagamba.sbam.dto.SystemDTO;
 import it.carmelolagamba.sbam.service.SystemService;
 import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,10 +16,9 @@ import org.springframework.stereotype.Component;
  * @Author carmelolg
  */
 @Component
-@Slf4j
 @AllArgsConstructor
 public class CoreServiceFacade {
-
+    private static final Logger log = LoggerFactory.getLogger(CoreServiceFacade.class);
     private final SystemService systemService;
 
     public SystemDTO getSystemInfo() {

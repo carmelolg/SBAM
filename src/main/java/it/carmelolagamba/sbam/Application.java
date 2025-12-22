@@ -13,8 +13,8 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 @SpringBootApplication
 @EnableConfigurationProperties
 @ConfigurationPropertiesScan
-@Slf4j
 @AllArgsConstructor
+@Slf4j
 public class Application implements CommandLineRunner {
 
 	private final ApplicationProperties applicationProperties;

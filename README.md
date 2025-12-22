@@ -8,10 +8,19 @@ A starter template for Spring Boot applications, designed to quickly kickstart t
 [![Coverage](.github/badges/jacoco.svg)](.github/badges/jacoco.svg)
 [![Branches](.github/badges/branches.svg)](.github/badges/branches.svg)
 
+## Release Notes - Version 2.2.0
+Here are the key updates and changes in this release:
+- Upgrade Spring Boot to version 4.0.1
+- Upgrade OpenAPI to version 3.1.0
+- Update Dockerfiles for better performance and smaller image sizes
+- Upgrade Maven to version 3.9.12
+- Upgrade Jacoco to version 0.8.14
+- Added maven compiler plugin configuration to enforce Java 25 compatibility
+
 ## Key Technologies
 
-- **Spring Boot**: v3.5.3
-- **OpenAPI**: v3.0.1 (for API documentation)
+- **Spring Boot**: v4.0.1
+- **OpenAPI**: v3.1.0 (for API documentation)
 - **Maven**: for dependency management and build
 - **Docker**: for containerization
 
@@ -27,6 +36,10 @@ Make sure you have the following tools installed:
 - **Maven**: Version 3.9.7 or higher
 - **Docker** (optional): for running in containers
 - **Git**: for cloning the repository
+
+#### Disclaimer
+This project is compiled and tested with JDK 25 and maven 3.9.12.<br>
+**Feel free to contact me if the version declared above causes any issue.**
 
 ### Clone the Repository
 
@@ -148,3 +161,10 @@ ssbam/
 ├── pom.xml
 └── README.md
 ```
+# License
+
+![CC BY-NC-ND 4.0](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png)
+
+This project is licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**.
+
+See `LICENSE.md` for the full license text.

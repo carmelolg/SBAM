@@ -1,7 +1,6 @@
 package it.carmelolagamba.sbam.command;
 
 import it.carmelolagamba.sbam.dto.SystemDTO;
-import it.carmelolagamba.sbam.service.SystemService;
 import it.carmelolagamba.sbam.service.facade.CoreServiceFacade;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

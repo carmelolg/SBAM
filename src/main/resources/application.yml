@@ -1,5 +1,5 @@
 # Custom properties
-version: 2.1.0
+version: 2.2.0
 name: Spring Boot Architecture for Microservice
 description: A template for Spring Boot microservices with OpenAPI and Docker files
 

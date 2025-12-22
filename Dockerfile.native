@@ -1,6 +1,6 @@
 # Stage 1: Build the JAR file
 # TODO find a standard docker image to build native images with graalvm with maven
-FROM softinstigate/graalvm-maven:21.0.2-graalce AS build
+FROM softinstigate/graalvm-maven:25-graalce AS build
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
