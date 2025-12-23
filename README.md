@@ -49,7 +49,7 @@ Clone the Git repository to your local machine:
 git clone https://github.com/carmelolg/spring-boot-microservice-template.git
 cd spring-boot-microservice-template
 ```
-
+---
 ## Building the Project
 
 To build the project, use the following Maven command:
@@ -62,6 +62,7 @@ If you want to skip tests during the build, run:
 mvn clean install -U -DskipTests
 ```
 
+---
 ## Running the Microservice
 
 You can start the microservice using Maven:
@@ -69,6 +70,8 @@ You can start the microservice using Maven:
 ```bash
 mvn spring-boot:run
 ```
+
+---
 
 ## Spring Profiles
 
@@ -82,14 +85,18 @@ mvn spring-boot:run -Dspring.profiles.active=dev
 
 For production (prod):
 ```bash
-    mvn spring-boot:run -Dspring.profiles.active=prod
+mvn spring-boot:run -Dspring.profiles.active=prod
 ```
+
+---
 
 ## API Documentation
 
 The APIs are documented with Swagger. Once the microservice is running, you can access the API documentation at the following URL:
 
 http://localhost:8080/swagger-ui/index.html
+
+---
 
 ## Using Docker
 
@@ -120,48 +127,63 @@ docker run -p 8080:8080 spring-boot-microservice-template-native
 
 The application will now be accessible at http://localhost:8080.
 
+---
+
 ## Project Structure
 
 The main structure of the project is as follows:
 ```crmsh
-ssbam/
-├── docs/
-│   └── architecture.drawio
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── it/
-│   │   │       └── carmelolagamba/
-│   │   │           └── sbam/
-│   │   │               ├── command/
-│   │   │               ├── config/
-│   │   │               ├── controller/
-│   │   │               │   ├── api/
-│   │   │               │   │   ├── v1/
-│   │   │               │   │   └── v2/
-│   │   │               ├── dto/
-│   │   │               │   └── mapper/
-│   │   │               ├── entity/
-│   │   │               ├── repository/
-│   │   │               ├── resource/
-│   │   │               │   └── assembler/
-│   │   │               ├── security/
-│   │   │               ├── service/
-│   │   │               │   └── facade/
-│   │   └── resources/
-│   │       ├── application-dev.yml
-│   │       ├── application-evo.yml
-│   │       ├── application-prod.yml
-│   │       ├── application-sit.yml
-│   │       ├── application.yml
-│   │       └── banner.txt
-├── Dockerfile
-├── Dockerfile.native
-├── LICENSE.md
-├── pom.xml
-└── README.md
+sbam/
+├── `Dockerfile`
+├── `Dockerfile.native`
+├── `LICENSE.md`
+├── `pom.xml`
+├── `README.md`
+├── `src/`
+│   ├── `main/`
+│   │   ├── `java/`
+│   │   │   └── `io/`
+│   │   │       └── `github/`
+│   │   │           └── `carmelolg/`
+│   │   │               └── `sbam/`
+│   │   │                   ├── `Application.java`
+│   │   │                   ├── `adapters/`
+│   │   │                   │   └── `command/`
+│   │   │                   ├── `controller/`
+│   │   │                   │   └── `api/`
+│   │   │                   │       ├── `v1/`
+│   │   │                   │       └── `v2/`
+│   │   │                   ├── `dto/`
+│   │   │                   │   └── `mapper/`
+│   │   │                   ├── `resource/`
+│   │   │                   │   └── `assembler/`
+│   │   │                   ├── `common/`
+│   │   │                   │   ├── `config/`
+│   │   │                   │   └── `security/`
+│   │   │                   ├── `core/`
+│   │   │                   │   └── `service/`
+│   │   │                   │       └── `facade/`
+│   │   │                   └── `persistence/`
+│   │   │                       ├── `entity/`
+│   │   │                       └── `repository/`
+│   │   └── `resources/`
+│   │       ├── `application-dev.yml`
+│   │       ├── `application-evo.yml`
+│   │       ├── `application-prod.yml`
+│   │       ├── `application-sit.yml`
+│   │       └── `application.yml`
+└── `README.md`
 ```
-# License
+---
+## Architecture
+
+The following diagram illustrates the architecture:
+
+![Architecture Diagram](docs/architecture.svg)
+
+---
+
+## License
 
 ![CC BY-NC-ND 4.0](https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png)
 

@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>it.carmelolagamba</groupId>
+    <groupId>io.github.carmelolg</groupId>
     <artifactId>sbam</artifactId>
     <version>2.2.0</version>
     <name>Spring Boot Architecture for Microservice</name>
@@ -128,7 +128,7 @@
                                         <limit>
                                             <counter>LINE</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>0.80</minimum>
+                                            <minimum>0.90</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
