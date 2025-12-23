@@ -19,5 +19,5 @@ management:
 
 # OpenAI properties
 springdoc:
-  packagesToScan: it.carmelolagamba
+  packagesToScan: io.github.carmelolg
   pathsToMatch: /, /*/**
