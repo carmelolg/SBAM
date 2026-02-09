@@ -19,8 +19,8 @@
     <properties>
         <version>2.2.0</version>
         <java.version>25</java.version>
-        <springdoc-openapi.version>2.8.14</springdoc-openapi.version>
-        <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
+        <springdoc-openapi.version>3.0.1</springdoc-openapi.version>
+        <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
         <jacoco-maven-plugin.version>0.8.14</jacoco-maven-plugin.version>
     </properties>
 
