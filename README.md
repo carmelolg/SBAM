@@ -10,7 +10,7 @@ A starter template for Spring Boot applications, designed to quickly kickstart t
 
 ## Release Notes - Version 2.2.0
 Here are the key updates and changes in this release:
-- Upgrade Spring Boot to version 4.0.1
+- Upgrade Spring Boot to version 4.0.2
 - Upgrade OpenAPI to version 3.1.0
 - Update Dockerfiles for better performance and smaller image sizes
 - Upgrade Maven to version 3.9.12
