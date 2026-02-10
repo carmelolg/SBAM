@@ -19,7 +19,7 @@ Here are the key updates and changes in this release:
 
 ## Key Technologies
 
-- **Spring Boot**: v4.0.1
+- **Spring Boot**: v4.0.2
 - **OpenAPI**: v3.1.0 (for API documentation)
 - **Maven**: for dependency management and build
 - **Docker**: for containerization
